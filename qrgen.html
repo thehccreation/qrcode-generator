@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="qrgen.css">
+    <link rel="shortcut icon" href="https://ik.imagekit.io/tovuwazhze/homepage%20assets/hcc-favicon.jpg?updatedAt=1705154642736" type="image/x-icon">
+    <title>QR Code Generator by HCC</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="https://thehccreation.github.io/home/">
+            <img src="https://ik.imagekit.io/tovuwazhze/homepage%20assets/hcc-logo-transparent.png?updatedAt=1722260211390" alt="" title="THEHCCREATION">
+             THEHCCREATION
+        </a></nav>
+    </header>
+    <div class="heading"><h1>QR Code Generator</h1><span>Easily create QR Code for any URL for free.</span></div>
+    <div class="containerbox">
+        <!-- <p>Enter text or URL</p> -->
+        <input type="text" placeholder="type / paste url here" id="qrText">
+        <div id="imgBox">
+            <img src="" id="qrImage">
+        </div>
+        <button onclick="generateQR()">Generate QR Code</button>
+        
+    </div>
+
+    <script>
+
+        let imgBox = document.getElementById("imgBox");
+        let qrImage = document.getElementById("qrImage");
+        let qrText = document.getElementById("qrText");
+
+        function generateQR(){
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + qrText.value;
+           }
+
+        
+
+    </script>
+
+</body>
+</html>
